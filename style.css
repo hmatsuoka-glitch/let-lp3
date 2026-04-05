@@ -83,49 +83,54 @@ button {
 /* ============================================
    MV (Hero)
    ============================================ */
+/* MV - トップビュー写真全画面 */
 .mv {
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
+  width: 100%;
+  line-height: 0;
 }
 
-.mv-overlay {
-  min-height: 100vh;
-  background: rgba(0, 0, 0, 0.35);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.mv-hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* MV Text Section */
+.mv-text-section {
+  background: #e8e8e8;
+  padding: 48px 20px;
+  text-align: center;
 }
 
 .mv-content {
-  text-align: center;
-  color: #fff;
-  padding: 40px 20px;
   max-width: 600px;
+  margin: 0 auto;
 }
 
 .mv-sub {
   font-size: 18px;
   font-weight: 600;
+  color: #000;
 }
 
 .mv-title {
-  font-size: 56px;
+  font-size: 48px;
   font-weight: 900;
   line-height: 1.3;
   margin-bottom: 12px;
+  color: #000;
 }
 
 .mv-sns-sub {
   font-size: 16px;
   margin-bottom: 8px;
+  color: #333;
 }
 
 .mv-question {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.8);
+  color: #666;
   margin-bottom: 24px;
 }
 
@@ -225,7 +230,7 @@ button {
 
 .concerns-person {
   display: block;
-  width: 180px;
+  width: 220px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -537,8 +542,10 @@ br.pc { display: none; }
 
 .up-badges {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   gap: 24px;
+  flex-wrap: wrap;
 }
 
 .up-badge {
@@ -546,8 +553,8 @@ br.pc { display: none; }
 }
 
 .up-circle {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   border: 4px solid #004e9b;
   display: flex;
@@ -555,17 +562,24 @@ br.pc { display: none; }
   align-items: center;
   justify-content: center;
   background: #fff;
+  box-shadow: 0 4px 16px rgba(0, 78, 155, 0.15);
+  transition: transform 0.3s;
+}
+
+.up-circle:hover {
+  transform: scale(1.05);
 }
 
 .up-circle-label {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  color: #000;
+  color: #004e9b;
   line-height: 1.3;
+  text-align: center;
 }
 
 .up-circle-text {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   font-weight: 900;
   color: #004e9b;
   line-height: 1;
@@ -583,22 +597,25 @@ br.pc { display: none; }
 
 .result-bubbles {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 24px;
-  max-width: 360px;
+  flex-direction: row;
+  gap: 16px;
+  margin-bottom: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .result-bubble {
-  background: rgba(0, 0, 0, 0.06);
-  border: 1px solid #ccc;
+  background: #fff;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 10px 16px;
-  font-size: 0.85rem;
+  padding: 14px 20px;
+  font-size: 0.9rem;
   color: #555;
   line-height: 1.6;
-  display: inline-block;
-  width: fit-content;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
 }
 
 .result-box {
@@ -663,6 +680,14 @@ br.pc { display: none; }
   font-size: 32px;
   font-weight: 900;
   margin-bottom: 48px;
+  line-height: 1.4;
+}
+
+.strength-title-sub {
+  font-size: 18px;
+  font-weight: 600;
+  color: #7c7c7c;
+  display: block;
 }
 
 .strength-items {
