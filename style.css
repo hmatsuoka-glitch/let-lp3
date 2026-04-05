@@ -162,165 +162,136 @@ button {
 }
 
 /* ============================================
-   Concerns (元LP完全再現)
+   Concerns (元LP DevTools仕様に準拠)
    ============================================ */
 .concerns {
   background: #4a4a4a;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='512' height='512' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E");
+  background-repeat: repeat;
   color: #fff;
-  padding: 40px 0 0;
+  padding: 2.6rem 0 7rem;
   text-align: center;
   position: relative;
-  overflow: hidden;
+  z-index: 2;
 }
 
-.concerns::before {
-  content: "";
+/* 見出し h2 */
+.concerns-heading {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+.concerns-heading span {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  position: relative;
+  display: inline;
+}
+
+/* 「お悩み」の下線装飾 (元LPの::after疑似要素) */
+.concerns-heading span::after {
+  content: '';
   position: absolute;
-  top: 0;
   left: 0;
+  bottom: 2px;
   width: 100%;
-  height: 100%;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  pointer-events: none;
-  z-index: 0;
+  height: 3px;
+  background: #fff;
 }
 
-.concerns > * {
+/* 吹き出し+イラストエリア */
+.concerns-figure {
+  margin: 0 auto 1.5rem;
+  max-width: 400px;
+  padding: 0 1rem;
+}
+
+.concerns-bubbles {
+  position: relative;
+  min-height: 240px;
+}
+
+.concerns-person {
+  display: block;
+  width: 160px;
+  margin: 0 auto;
   position: relative;
   z-index: 1;
 }
 
-.concerns-inner {
-  max-width: 420px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-/* 見出し */
-.concerns-title {
-  margin-bottom: 20px;
-  line-height: 1.3;
-}
-
-.concerns-konna {
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.concerns-em {
-  font-size: 40px;
-  font-weight: 900;
-  letter-spacing: 3px;
-  font-style: italic;
-}
-
-.concerns-suffix {
-  font-size: 16px;
-  font-weight: 500;
-}
-
-/* 吹き出し+イラストエリア */
-.concerns-visual {
-  position: relative;
-  min-height: 260px;
-  margin-bottom: 20px;
-}
-
-.concerns-person-img {
-  display: block;
-  width: 170px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 0;
-}
-
-/* 吹き出し: 斜めカットの台形風 */
+/* 吹き出し */
 .bubble {
-  background: rgba(40, 40, 40, 0.93);
-  padding: 6px 18px 8px;
-  font-size: 12px;
+  background: rgba(40, 40, 40, 0.92);
+  padding: 0.4rem 1rem 0.5rem;
+  font-size: 0.75rem;
   font-weight: 400;
   white-space: nowrap;
   display: inline-block;
-  position: relative;
   border-radius: 4px;
-  transform: skewX(-3deg);
-  line-height: 1.3;
-}
-
-.bubble > * {
-  transform: skewX(3deg);
-  display: block;
-}
-
-.bubble-small {
-  font-size: 12px;
-  font-weight: 400;
+  transform: skewX(-4deg);
+  line-height: 1.4;
+  position: relative;
+  z-index: 2;
 }
 
 .bubble strong {
   font-weight: 900;
-  font-size: 17px;
+  font-size: 1.1rem;
   display: block;
-  letter-spacing: 1px;
+  transform: skewX(4deg);
+  letter-spacing: 0.5px;
 }
 
-.bubble-top-right {
-  float: right;
-  clear: both;
-  margin-bottom: 4px;
+.bubble-1 {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-.bubble-mid-left {
-  float: left;
-  clear: both;
-  margin-top: -10px;
+.bubble-2 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: skewX(-4deg) translateY(-50%);
 }
 
-.bubble-bottom-right {
-  float: right;
-  clear: both;
-  margin-top: -15px;
+.bubble-3 {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
 }
 
-/* 下部テキストボックス */
+/* テキストボックス */
 .concerns-box {
-  clear: both;
-  background: rgba(200, 200, 200, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 8px;
-  padding: 24px 20px;
+  background: rgba(180, 180, 180, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 0.5rem;
+  padding: 1.8rem 1.2rem;
   text-align: center;
-  margin-bottom: 30px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .concerns-box p {
-  font-size: 14px;
-  line-height: 2;
-  margin-bottom: 4px;
+  font-size: 0.875rem;
+  line-height: 2.2;
+  margin-bottom: 0;
 }
 
-.concerns-box p:last-child { margin-bottom: 0; }
-
-.concerns-box strong {
+.concerns-bold {
   font-weight: 800;
   text-decoration: underline;
   text-underline-offset: 4px;
   text-decoration-thickness: 2px;
 }
 
-/* TREND背景文字 */
-.concerns-bg-text {
-  font-size: 90px;
-  font-weight: 900;
-  color: rgba(255, 255, 255, 0.04);
-  letter-spacing: 12px;
-  text-align: left;
-  padding-left: 10px;
-  line-height: 1;
-  padding-bottom: 8px;
-}
+/* SP用改行 (デフォルト表示、PCで非表示) */
+br.sp { display: inline; }
+br.pc { display: none; }
 
 /* ============================================
    About
@@ -1007,6 +978,12 @@ button {
   font-weight: 700;
 }
 
+/* PC向けbr切り替え */
+@media screen and (min-width: 769px) {
+  br.sp { display: none; }
+  br.pc { display: inline; }
+}
+
 /* ============================================
    Responsive — Tablet (768px)
    ============================================ */
@@ -1038,7 +1015,7 @@ button {
     height: 100px;
   }
 
-  .concerns-person-img {
+  .concerns-person {
     width: 140px;
   }
 
@@ -1108,13 +1085,12 @@ button {
     font-size: 20px;
   }
 
-  .concerns-em {
-    font-size: 28px;
+  .concerns-heading span {
+    font-size: 1.8rem;
   }
 
-  .concerns-bg-text {
-    font-size: 60px;
-    letter-spacing: 8px;
+  .concerns-person {
+    width: 130px;
   }
 
   .strength-free-title strong {
