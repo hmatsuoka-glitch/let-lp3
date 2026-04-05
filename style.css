@@ -212,21 +212,22 @@ button {
 
 .concerns-bubbles {
   position: relative;
-  min-height: 240px;
+  max-width: 340px;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .concerns-person {
   display: block;
-  width: 160px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
+  width: 140px;
+  margin: 30px auto 30px;
 }
 
 /* 吹き出し */
 .bubble {
-  background: rgba(40, 40, 40, 0.92);
-  padding: 0.4rem 1rem 0.5rem;
+  background: rgba(40, 40, 40, 0.93);
+  padding: 0.3rem 0.9rem 0.4rem;
   font-size: 0.75rem;
   font-weight: 400;
   white-space: nowrap;
@@ -234,35 +235,32 @@ button {
   border-radius: 4px;
   transform: skewX(-4deg);
   line-height: 1.4;
-  position: relative;
-  z-index: 2;
 }
 
 .bubble strong {
   font-weight: 900;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   display: block;
   transform: skewX(4deg);
   letter-spacing: 0.5px;
 }
 
 .bubble-1 {
-  position: absolute;
-  top: 0;
-  right: 0;
+  display: block;
+  text-align: right;
+  margin-bottom: -15px;
 }
 
 .bubble-2 {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: skewX(-4deg) translateY(-50%);
+  display: block;
+  text-align: left;
+  margin-top: -20px;
 }
 
 .bubble-3 {
-  position: absolute;
-  bottom: 10px;
-  right: 0;
+  display: block;
+  text-align: right;
+  margin-top: -20px;
 }
 
 /* テキストボックス */
@@ -344,92 +342,194 @@ br.pc { display: none; }
 }
 
 /* ============================================
-   Achievement Carousel
+   Achievement (元LP準拠: スマホモックアップ)
    ============================================ */
 .achievement {
-  padding: 80px 0;
-  background: #fff;
-}
-
-.cases-carousel {
-  position: relative;
+  padding: 3.8rem 0 0;
   overflow: hidden;
 }
 
-.cases-track {
+.achievement_inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* 見出し: 斜体枠線 */
+.achievement h2 {
+  width: 252px;
+  border: 3px solid #000;
+  margin: 0 auto 2.2rem;
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-align: center;
+  transform: skewX(-20deg);
+  padding: 4px 0 6px;
+}
+
+.achievement h2 span {
+  display: block;
+  transform: skewX(20deg);
+}
+
+/* スライダー */
+.achievement_slider {
+  position: relative;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.achievement_track {
   display: flex;
   transition: transform 0.4s ease;
 }
 
-.case-slide {
+/* 各スライド */
+.achievement_slide {
   min-width: 100%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.4s, opacity 0.4s;
 }
 
-.case-slide video {
-  width: 100%;
-  max-width: 600px;
-  border-radius: 8px;
-  margin: 0 auto 16px;
+/* スマホ風フレーム */
+.achievement_item {
+  width: 240px;
+  background: #1a1a1a;
+  border-radius: 32px;
+  padding: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+/* ノッチ */
+.achievement_item::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 6px;
+  background: #333;
+  border-radius: 3px;
+  z-index: 3;
+}
+
+/* 成果テキスト */
+.achievement_item h3 {
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  color: #fff;
+  padding: 16px 8px 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.achievement_item h3 span {
   display: block;
 }
 
-.case-caption {
-  font-size: 18px;
-  font-weight: 700;
+/* 動画エリア (角丸マスク) */
+.achievement_video {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #000;
 }
 
-.carousel-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 16px;
+.achievement_video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
-.carousel-btn {
-  width: 48px;
-  height: 48px;
+/* ナビゲーション矢印 */
+.achievement_prev,
+.achievement_next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0,0,0,0.4);
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 5;
   transition: background 0.3s;
 }
 
-.carousel-btn:hover {
-  background: rgba(0, 0, 0, 0.7);
+.achievement_prev:hover,
+.achievement_next:hover {
+  background: rgba(0,0,0,0.7);
 }
 
-.case-voice {
+.achievement_prev { left: 10px; }
+.achievement_next { right: 10px; }
+
+/* 企業詳細カード */
+.achievement_detail {
+  max-width: 500px;
+  margin: 2rem auto 0;
+  text-align: center;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  padding: 0 20px 1.5rem;
+  position: relative;
+  min-height: 120px;
+}
+
+/* 企業名タブ (黒帯) */
+.achievement_detail h4 {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.3rem 1.5rem;
+  border-radius: 4px;
+  margin: -0.9rem auto 0.8rem;
+  position: relative;
+}
+
+.achievement_detail h4 span {
+  font-size: 1rem;
+}
+
+/* 地域・業種 */
+.achievement_detail_prof {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #7c7c7c;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+}
+
+/* 各カードの切り替え */
+.achievement_detail_item {
   display: none;
-  background: #f5f5f5;
-  border-radius: 12px;
-  padding: 24px;
 }
 
-.case-voice.active {
+.achievement_detail_item.show {
   display: block;
 }
 
-.case-voice h4 {
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.case-voice-meta {
-  font-size: 13px;
-  color: #7c7c7c;
-}
-
-.case-voice-text {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.8;
+/* 企業コメント */
+.achievement_detail_txt {
+  text-align: left;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #333;
 }
 
 /* ============================================

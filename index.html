@@ -84,61 +84,91 @@
 
   <!-- Achievement -->
   <section class="achievement">
-    <div class="container">
-      <div class="section-heading-box">建設業の採用実績</div>
-      <div class="cases-carousel">
-        <div class="cases-track">
-          <div class="case-slide">
-            <video src="images/case1.mp4" autoplay muted loop playsinline preload="none"></video>
-            <p class="case-caption">6ヶ月で10名採用<br>2年で200人以上の応募獲得</p>
+    <div class="achievement_inner">
+      <h2><span>建設業の採用実績</span></h2>
+
+      <div class="achievement_slider">
+        <div class="achievement_track" id="achievementTrack">
+          <div class="achievement_slide">
+            <div class="achievement_item">
+              <h3><span>6ヶ月で10名採用<br>2年で200人以上の応募獲得</span></h3>
+              <div class="achievement_video">
+                <video autoplay muted loop playsinline preload="none">
+                  <source src="images/case1.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
           </div>
-          <div class="case-slide">
-            <video src="images/case2.mp4" autoplay muted loop playsinline preload="none"></video>
-            <p class="case-caption">即戦力の施工管理を多数獲得</p>
+          <div class="achievement_slide">
+            <div class="achievement_item">
+              <h3><span>即戦力の施工管理を<br>多数獲得</span></h3>
+              <div class="achievement_video">
+                <video autoplay muted loop playsinline preload="none">
+                  <source src="images/case2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
           </div>
-          <div class="case-slide">
-            <video src="images/case3.mp4" autoplay muted loop playsinline preload="none"></video>
-            <p class="case-caption">SNSから10名の採用<br>フォロワー3万人超</p>
+          <div class="achievement_slide">
+            <div class="achievement_item">
+              <h3><span>SNSから10名の採用<br>フォロワー3万人超</span></h3>
+              <div class="achievement_video">
+                <video autoplay muted loop playsinline preload="none">
+                  <source src="images/case3.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
           </div>
-          <div class="case-slide">
-            <video src="images/case4.mp4" autoplay muted loop playsinline preload="none"></video>
-            <p class="case-caption">2ヶ月目で7人採用<br>採用問い合わせ19件</p>
+          <div class="achievement_slide">
+            <div class="achievement_item">
+              <h3><span>2ヶ月目で7人採用<br>採用問い合わせ19件</span></h3>
+              <div class="achievement_video">
+                <video autoplay muted loop playsinline preload="none">
+                  <source src="images/case4.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
           </div>
-          <div class="case-slide">
-            <video src="images/case1.mp4" autoplay muted loop playsinline preload="none"></video>
-            <p class="case-caption">3年間問い合わせ0から<br>6ヶ月で7人採用</p>
+          <div class="achievement_slide">
+            <div class="achievement_item">
+              <h3><span>3年間問い合わせ0から<br>6ヶ月で7人採用</span></h3>
+              <div class="achievement_video">
+                <video autoplay muted loop playsinline preload="none">
+                  <source src="images/case1.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="carousel-buttons">
-          <button class="carousel-btn" onclick="slideCases(-1)">&#10094;</button>
-          <button class="carousel-btn" onclick="slideCases(1)">&#10095;</button>
-        </div>
+        <button class="achievement_prev" onclick="slideAchievement(-1)">&#10094;</button>
+        <button class="achievement_next" onclick="slideAchievement(1)">&#10095;</button>
       </div>
-      <div class="cases-voices">
-        <div class="case-voice active">
-          <h4>株式会社砂建 様</h4>
-          <p class="case-voice-meta">岡山県／プラント設備の製造・施工・撤去、仮設工事全般</p>
-          <p class="case-voice-text">建設業界に対して感じる世間のマイナスイメージを払拭する企画を実施。県内でも有名な建設会社のイメージがつき、採用だけではなく企業のブランディングにも繋がっています。</p>
+
+      <div class="achievement_detail">
+        <div class="achievement_detail_item show">
+          <h4><span>株式会社砂建 </span>様</h4>
+          <p class="achievement_detail_prof">岡山県／プラント設備の製造・施工・撤去、仮設工事全般</p>
+          <p class="achievement_detail_txt">建設業界に対して感じる世間のマイナスイメージを払拭する企画を実施。県内でも有名な建設会社のイメージがつき、採用だけではなく企業のブランディングにも繋がっています。</p>
         </div>
-        <div class="case-voice">
-          <h4>中城建設株式会社 様</h4>
-          <p class="case-voice-meta">宮城県／総合建設業</p>
-          <p class="case-voice-text">SNSで採用資産を築けたと実感しています。条件だけで見られてしまっていた採用が、いまでは人を選ぶ立場へと変化しました。</p>
+        <div class="achievement_detail_item">
+          <h4><span>中城建設株式会社 </span>様</h4>
+          <p class="achievement_detail_prof">宮城県／総合建設業</p>
+          <p class="achievement_detail_txt">SNSで採用資産を築けたと実感しています。条件だけで見られてしまっていた採用が、いまでは人を選ぶ立場へと変化しました。</p>
         </div>
-        <div class="case-voice">
-          <h4>株式会社タイハク 様</h4>
-          <p class="case-voice-meta">宮城県／生コンクリートの製造販売及び資材販売</p>
-          <p class="case-voice-text">元々40～50代ばかりだった応募が20～30代メインになりました。ドライバーの採用メインだったが事務も採用できています。</p>
+        <div class="achievement_detail_item">
+          <h4><span>株式会社タイハク </span>様</h4>
+          <p class="achievement_detail_prof">宮城県／生コンクリートの製造販売及び資材販売</p>
+          <p class="achievement_detail_txt">元々40～50代ばかりだった応募が20～30代メインになりました。ドライバーの採用メインだったが事務も採用できています。</p>
         </div>
-        <div class="case-voice">
-          <h4>株式会社H.R.D 様</h4>
-          <p class="case-voice-meta">兵庫県／エアコンの取り付け工事・クリーニング</p>
-          <p class="case-voice-text">業界的に人材が集まりにくい中で短期で成果が出たことに満足しています。求職者の熱量も高く採用がスムーズになりました。</p>
+        <div class="achievement_detail_item">
+          <h4><span>株式会社H.R.D </span>様</h4>
+          <p class="achievement_detail_prof">兵庫県／エアコンの取り付け工事・クリーニング</p>
+          <p class="achievement_detail_txt">業界的に人材が集まりにくい中で短期で成果が出たことに満足しています。求職者の熱量も高く採用がスムーズになりました。</p>
         </div>
-        <div class="case-voice">
-          <h4>株式会社優計コンサルタント 様</h4>
-          <p class="case-voice-meta">岡山県／補償コンサルタント</p>
-          <p class="case-voice-text">過去に色々な媒体で求人を行いましたが全く人が来ませんでした。半信半疑でしたがSNSに対するイメージがすっかり変わりました。</p>
+        <div class="achievement_detail_item">
+          <h4><span>株式会社優計コンサルタント </span>様</h4>
+          <p class="achievement_detail_prof">岡山県／補償コンサルタント</p>
+          <p class="achievement_detail_txt">過去に色々な媒体で求人を行いましたが全く人が来ませんでした。半信半疑でしたがSNSに対するイメージがすっかり変わりました。</p>
         </div>
       </div>
     </div>
@@ -403,19 +433,33 @@
   </div>
 
   <script>
-    // Cases carousel
+    // Achievement carousel (スマホモックアップスライダー)
     (function() {
       var idx = 0;
-      var track = document.querySelector('.cases-track');
-      var slides = document.querySelectorAll('.case-slide');
-      var voices = document.querySelectorAll('.case-voice');
+      var track = document.getElementById('achievementTrack');
+      var slides = document.querySelectorAll('.achievement_slide');
+      var details = document.querySelectorAll('.achievement_detail_item');
       var total = slides.length;
-      window.slideCases = function(dir) {
-        idx = (idx + dir + total) % total;
+
+      function updateSlides() {
+        slides.forEach(function(s, i) {
+          s.classList.remove('active', 'prev', 'next');
+          if (i === idx) s.classList.add('active');
+          else if (i === (idx - 1 + total) % total) s.classList.add('prev');
+          else if (i === (idx + 1) % total) s.classList.add('next');
+        });
         track.style.transform = 'translateX(-' + (idx * 100) + '%)';
-        for (var i = 0; i < voices.length; i++) voices[i].classList.remove('active');
-        if (voices[idx]) voices[idx].classList.add('active');
+        details.forEach(function(d, i) {
+          d.classList.toggle('show', i === idx);
+        });
+      }
+
+      window.slideAchievement = function(dir) {
+        idx = (idx + dir + total) % total;
+        updateSlides();
       };
+
+      updateSlides();
     })();
 
     // Voice carousel
