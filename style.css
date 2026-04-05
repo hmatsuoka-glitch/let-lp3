@@ -157,100 +157,117 @@ img { max-width: 100%; height: auto; display: block; }
    Concerns (元LP完全再現)
    ======================================== */
 .concerns {
-  background: #444 url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="200" height="200" filter="url(%23n)" opacity="0.15"/></svg>');
+  background: #555;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="5" stitchTiles="stitch"/></filter><rect width="300" height="300" filter="url(%23n)" opacity="0.2"/></svg>');
   color: #fff;
-  padding: 48px 0 60px;
+  padding: 48px 0 0;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .concerns-inner {
-  max-width: 500px;
+  max-width: 440px;
   margin: 0 auto;
   padding: 0 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .concerns-title {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 32px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 28px;
   line-height: 1.6;
 }
 
 .concerns-em {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 900;
   display: inline;
+  letter-spacing: 2px;
 }
 
 .concerns-visual {
   position: relative;
-  min-height: 280px;
-  margin-bottom: 32px;
+  padding: 0 10px;
+  margin-bottom: 24px;
 }
 
-.concerns-person {
-  text-align: center;
-}
-
-.concerns-person img {
-  width: 160px;
+.concerns-person-img {
+  display: block;
+  width: 140px;
   margin: 0 auto;
+  position: relative;
+  z-index: 0;
 }
 
 .bubble {
-  background: rgba(80,80,80,0.85);
+  background: rgba(50,50,50,0.92);
   border-radius: 20px;
-  padding: 10px 18px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.5;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
   display: inline-block;
-  position: relative;
-  margin-bottom: 12px;
+  white-space: nowrap;
 }
 
 .bubble strong {
   font-weight: 800;
-  font-size: 16px;
+  font-size: 15px;
+  display: block;
 }
 
-.bubble-right {
+.bubble-top-right {
   float: right;
-  clear: both;
-  margin-right: 10px;
+  margin-bottom: 8px;
 }
 
-.bubble-left {
+.bubble-mid-left {
   float: left;
-  clear: both;
-  margin-left: 10px;
+  clear: left;
 }
 
-.bubble-right-bottom {
+.bubble-bottom-right {
   float: right;
-  clear: both;
-  margin-right: 20px;
+  clear: right;
+  margin-top: -8px;
 }
 
 .concerns-box {
   clear: both;
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.25);
-  border-radius: 12px;
-  padding: 28px 24px;
+  background: rgba(180,180,180,0.2);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  padding: 28px 20px;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .concerns-box p {
-  font-size: 15px;
-  line-height: 1.9;
-  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 2;
+  margin-bottom: 8px;
 }
 
 .concerns-box p:last-child { margin-bottom: 0; }
 
 .concerns-box strong {
   font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.concerns-bg-text {
+  font-size: 100px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.05);
+  letter-spacing: 16px;
+  text-align: left;
+  padding-left: 20px;
+  line-height: 1;
+  padding-bottom: 10px;
 }
 
 /* ========================================
@@ -591,49 +608,44 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .voice-card {
-  border: 1px solid #ddd;
+  border: 1px solid #e0e0e0;
   border-radius: 12px;
-  overflow: hidden;
   background: #fff;
-}
-
-.voice-card-tab {
-  background: #eee;
-  padding: 10px 20px;
-  font-size: 14px;
-  font-weight: 700;
-  border-radius: 12px 12px 0 0;
-}
-
-.voice-card-inner {
   padding: 24px;
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-.voice-card-avatar { flex-shrink: 0; }
-.voice-card-avatar img {
-  width: 80px;
-  height: 80px;
+.voice-card-company {
+  font-size: 15px;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 16px;
+}
+
+.voice-card-photo {
+  margin-bottom: 16px;
+}
+
+.voice-card-photo img {
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.voice-card-content { flex: 1; }
-
 .voice-card-headline {
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 800;
   color: #004e9b;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   line-height: 1.5;
 }
 
 .voice-card-detail {
   font-size: 14px;
   color: #555;
-  line-height: 1.8;
+  line-height: 1.9;
 }
 
 .voice-note {
@@ -938,7 +950,7 @@ img { max-width: 100%; height: auto; display: block; }
   .mv-badges { justify-content: center; gap: 8px; }
   .mv-badge-img { width: 100px; height: 100px; }
 
-  .concerns-person img { width: 130px; }
+  .concerns-person-img { width: 120px; }
 
   .about-bg-text { font-size: 40px; }
 
@@ -948,7 +960,7 @@ img { max-width: 100%; height: auto; display: block; }
   .strength-num { font-size: 48px; }
   .strength-item { padding: 24px; }
 
-  .voice-card-inner { flex-direction: column; }
+  .voice-card { padding: 20px; }
 
   .mid-cta-text { font-size: 18px; }
   .contact-form { padding: 24px 16px; }
