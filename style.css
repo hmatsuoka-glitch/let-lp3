@@ -699,7 +699,7 @@ br.pc { display: none; }
   font-size: 36px;
   font-weight: 900;
   margin-bottom: 48px;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 .strength-title-sub {
@@ -707,6 +707,7 @@ br.pc { display: none; }
   font-weight: 700;
   color: #7c7c7c;
   display: block;
+  margin-bottom: 2px;
 }
 
 .strength-items {
