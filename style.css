@@ -1957,23 +1957,26 @@ br.pc { display: none; }
   .results-flow-steps {
     flex-direction: column;
     gap: 0;
+    align-items: center;
   }
 
   .results-flow-step {
-    flex-direction: column;
-    max-width: 240px;
-    gap: 12px;
-    padding: 24px 20px;
+    flex-direction: row;
+    max-width: 280px;
+    width: 280px;
+    gap: 16px;
+    padding: 20px 24px;
+    justify-content: flex-start;
   }
 
   .results-flow-icon {
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
     flex-shrink: 0;
   }
 
   .results-flow-label {
-    text-align: center;
+    text-align: left;
   }
 
   .results-flow-arrow {
