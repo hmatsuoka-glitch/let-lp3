@@ -92,120 +92,73 @@ button {
 
 .mv-hero-img {
   width: 100%;
-  max-height: 85vh;
+  height: auto;
   display: block;
   object-fit: cover;
-  object-position: center top;
 }
 
 /* MV Text Section */
 .mv-text-section {
-  background: #1a1a1a;
-  padding: 56px 20px 52px;
+  background: #e8e8e8;
+  padding: 48px 20px;
   text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.mv-text-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background:
-    repeating-linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.02) 0px,
-      rgba(255, 255, 255, 0.02) 1px,
-      transparent 1px,
-      transparent 60px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.02) 0px,
-      rgba(255, 255, 255, 0.02) 1px,
-      transparent 1px,
-      transparent 60px
-    );
-  pointer-events: none;
-}
-
-.mv-text-section::after {
-  content: "";
-  position: absolute;
-  top: -80px;
-  right: -80px;
-  width: 300px;
-  height: 300px;
-  border: 40px solid rgba(255, 255, 255, 0.03);
-  border-radius: 0;
-  transform: rotate(15deg);
-  pointer-events: none;
 }
 
 .mv-content {
   max-width: 600px;
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
 }
 
 .mv-sub {
   font-size: 18px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.7);
-  letter-spacing: 2px;
+  color: #000;
 }
 
 .mv-title {
   font-size: 48px;
   font-weight: 900;
   line-height: 1.3;
-  margin-bottom: 16px;
-  color: #fff;
+  margin-bottom: 12px;
+  color: #000;
 }
 
 .mv-sns-sub {
-  font-size: 17px;
+  font-size: 16px;
   margin-bottom: 8px;
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 600;
-  letter-spacing: 1px;
+  color: #333;
 }
 
 .mv-question {
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 28px;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 24px;
 }
 
 .mv-badges {
   display: flex;
   flex-direction: row;
-  gap: 16px;
+  gap: 12px;
   justify-content: center;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .mv-badge-circle {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 3px solid #004e9b;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .mv-badge-label {
   font-size: 0.65rem;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.8);
+  color: #004e9b;
   text-align: center;
   line-height: 1.3;
 }
@@ -213,7 +166,7 @@ button {
 .mv-badge-up {
   font-size: 1.4rem;
   font-weight: 900;
-  color: #fff;
+  color: #004e9b;
   line-height: 1;
 }
 
