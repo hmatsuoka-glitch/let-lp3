@@ -847,7 +847,7 @@ br.pc { display: none; }
 }
 
 .sim-red {
-  color: #cc0000;
+  color: #004e9b;
 }
 
 .sim-table-highlight {
@@ -870,7 +870,7 @@ br.pc { display: none; }
   text-align: center;
   font-size: 1.6rem;
   font-weight: 900;
-  color: #cc0000;
+  color: #004e9b;
   line-height: 1.2;
 }
 
@@ -880,7 +880,7 @@ br.pc { display: none; }
 }
 
 .sim-annual-box {
-  background: linear-gradient(135deg, #ffe0e6, #ffd0da);
+  background: linear-gradient(135deg, #dce8f5, #c8d9f0);
   border-radius: 12px;
   padding: 20px;
   text-align: center;
