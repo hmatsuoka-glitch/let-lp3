@@ -880,29 +880,31 @@ br.pc { display: none; }
 }
 
 .sim-annual-box {
-  background: linear-gradient(135deg, #dce8f5, #c8d9f0);
+  background: linear-gradient(135deg, #004e9b, #0a1a3a);
   border-radius: 12px;
-  padding: 20px;
+  padding: 24px 20px;
   text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 78, 155, 0.3);
 }
 
 .sim-annual-label {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  color: #333;
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 4px;
+  letter-spacing: 0.1em;
 }
 
 .sim-annual-value {
   font-size: 1.1rem;
   font-weight: 800;
-  color: #000;
+  color: #fff;
 }
 
 .sim-annual-big {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   font-weight: 900;
-  color: #000;
+  color: #fff;
 }
 
 /* ============================================
