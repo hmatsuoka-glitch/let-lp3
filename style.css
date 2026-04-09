@@ -813,13 +813,14 @@ br.pc { display: none; }
 
 .voice-card-photo {
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .voice-card-photo img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  background: transparent;
 }
 
 .voice-card-headline {
