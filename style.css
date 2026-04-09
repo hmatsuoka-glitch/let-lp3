@@ -1149,17 +1149,26 @@ br.pc { display: none; }
 
 .voice-carousel {
   position: relative;
-  overflow: hidden;
 }
 
 .voice-track {
   display: flex;
-  transition: transform 0.4s ease;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  gap: 16px;
+  padding-bottom: 8px;
+}
+
+.voice-track::-webkit-scrollbar {
+  display: none;
 }
 
 .voice-slide {
-  min-width: 100%;
-  padding: 0 10px;
+  min-width: 85%;
+  scroll-snap-align: center;
+  flex-shrink: 0;
 }
 
 .voice-card {

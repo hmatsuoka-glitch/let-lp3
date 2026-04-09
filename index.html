@@ -423,10 +423,6 @@
           </div>
         </div>
         <p class="voice-note">※こちらは一例であり、結果を保証するものではございません。</p>
-        <div class="carousel-buttons">
-          <button class="carousel-btn" onclick="slideVoice(-1)">&#10094;</button>
-          <button class="carousel-btn" onclick="slideVoice(1)">&#10095;</button>
-        </div>
       </div>
     </div>
   </section>
@@ -620,16 +616,32 @@
       updateSlides();
     })();
 
-    // Voice carousel
+    // Voice swipe carousel
     (function() {
-      var idx = 0;
       var track = document.querySelector('.voice-track');
-      var slides = document.querySelectorAll('.voice-slide');
-      var total = slides.length;
-      window.slideVoice = function(dir) {
-        idx = (idx + dir + total) % total;
-        track.style.transform = 'translateX(-' + (idx * 100) + '%)';
-      };
+      var startX = 0, currentX = 0, isDragging = false;
+
+      track.addEventListener('touchstart', function(e) {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+        track.style.scrollBehavior = 'auto';
+      }, { passive: true });
+
+      track.addEventListener('touchmove', function(e) {
+        if (!isDragging) return;
+        currentX = e.touches[0].clientX;
+      }, { passive: true });
+
+      track.addEventListener('touchend', function() {
+        if (!isDragging) return;
+        isDragging = false;
+        var diff = startX - currentX;
+        var slideWidth = track.querySelector('.voice-slide').offsetWidth;
+        track.style.scrollBehavior = 'smooth';
+        if (Math.abs(diff) > 50) {
+          track.scrollBy({ left: diff > 0 ? slideWidth : -slideWidth, behavior: 'smooth' });
+        }
+      });
     })();
   </script>
 
