@@ -975,66 +975,60 @@ br.pc { display: none; }
    Strength Result (建設業はすぐに結果が出ます)
    ============================================ */
 .strength-result {
-  padding: 40px 0 60px;
-  background: #f5f5f5;
   position: relative;
   overflow: hidden;
   text-align: center;
+  padding: 0;
+  background: transparent;
 }
 
-.result-bubbles {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  margin-bottom: 32px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.result-bubble {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 14px 20px;
-  font-size: 0.9rem;
-  color: #555;
-  line-height: 1.6;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  flex: 1;
-  min-width: 200px;
-  max-width: 300px;
+.strength-result-inner {
+  background: #0a1a3a;
+  padding: 60px 0 50px;
+  position: relative;
+  clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
 }
 
 .result-box {
   display: inline-block;
-  border: 3px solid #000;
-  padding: 8px 24px;
-  margin-bottom: 16px;
+  background: #fff;
+  border: 3px solid #cc0000;
+  border-radius: 4px;
+  padding: 8px 28px;
+  margin-bottom: 20px;
 }
 
 .result-box-title {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 900;
+  color: #000;
 }
 
 .result-area {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #004e9b;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
   line-height: 1.6;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+.result-dondon-box {
+  display: inline-block;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  padding: 8px 32px;
+  margin-bottom: 16px;
 }
 
 .result-dondon {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 900;
-  color: #cc0000;
+  color: #fff;
 }
 
-.result-person {
-  display: block;
-  width: 120px;
-  margin: 20px auto 0;
+.result-note {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 /* ============================================
@@ -1732,12 +1726,6 @@ br.pc { display: none; }
   .up-circle {
     width: 95px;
     height: 95px;
-  }
-
-  .result-person {
-    width: 100px;
-    right: 10px;
-    bottom: 10px;
   }
 
   .mv-badges {
