@@ -1159,7 +1159,7 @@ br.pc { display: none; }
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   gap: 12px;
-  padding: 0 4% 8px;
+  padding: 0 16px 8px;
 }
 
 .voice-track::-webkit-scrollbar {
@@ -1167,7 +1167,8 @@ br.pc { display: none; }
 }
 
 .voice-slide {
-  min-width: 85%;
+  width: calc(100vw - 64px);
+  max-width: 400px;
   scroll-snap-align: center;
   flex-shrink: 0;
   box-sizing: border-box;
@@ -1178,11 +1179,7 @@ br.pc { display: none; }
   border-radius: 12px;
   background: #fff;
   padding: 24px;
-  max-width: 100%;
-  margin: 0 auto;
   box-sizing: border-box;
-  word-break: break-word;
-  overflow-wrap: break-word;
 }
 
 .voice-card-company {
@@ -1694,10 +1691,6 @@ br.pc { display: none; }
     padding: 20px;
   }
 
-  .voice-slide {
-    min-width: 80%;
-  }
-
   .voice-card-photo img {
     width: 130px;
     height: 130px;
@@ -1791,10 +1784,6 @@ br.pc { display: none; }
 
   .strength-item img {
     max-width: 100%;
-  }
-
-  .voice-slide {
-    min-width: 90%;
   }
 
   .voice-card-photo img {
