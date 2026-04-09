@@ -177,8 +177,8 @@ button {
 
 /* 月桂樹バッジ */
 .mv-laurel {
-  width: 80px;
-  margin-bottom: 8px;
+  width: 120px;
+  margin-bottom: 12px;
 }
 
 /* モバイルでは装飾画像を非表示 */
@@ -1720,23 +1720,23 @@ br.pc { display: none; }
 
   .mv-deco-worker1 {
     height: 95%;
-    left: 3%;
+    left: 12%;
   }
 
   .mv-deco-worker2 {
     height: 90%;
-    right: 3%;
+    right: 12%;
   }
 
   .mv-deco-excavator1 {
     height: 80%;
-    left: -3%;
+    left: 5%;
     opacity: 0.25;
   }
 
   .mv-deco-excavator2 {
     height: 75%;
-    right: -3%;
+    right: 5%;
     opacity: 0.25;
   }
 
@@ -1747,8 +1747,8 @@ br.pc { display: none; }
   }
 
   .mv-laurel {
-    width: 110px;
-    margin-bottom: 12px;
+    width: 160px;
+    margin-bottom: 16px;
   }
 
   .mv-sub {
