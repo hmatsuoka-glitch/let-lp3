@@ -946,14 +946,14 @@ br.pc { display: none; }
 }
 
 .cost-bar-label {
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 700;
   margin-bottom: 6px;
   color: #333;
 }
 
 .cost-bar-label span {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 400;
   color: #888;
 }
@@ -963,12 +963,12 @@ br.pc { display: none; }
 }
 
 .cost-bar {
-  height: 30px;
+  height: 36px;
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 0 12px;
+  padding: 0 14px;
 }
 
 .cost-bar--gray {
@@ -988,7 +988,7 @@ br.pc { display: none; }
 
 .cost-bar-text {
   color: #fff;
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 700;
   white-space: nowrap;
 }
