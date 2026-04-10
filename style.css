@@ -686,21 +686,22 @@ br.pc { display: none; }
   width: 240px;
   background: #1a1a1a;
   border-radius: 32px;
-  padding: 12px;
+  padding: 8px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.3);
   position: relative;
 }
 
 /* 動画エリア (角丸マスク) */
 .achievement_video {
-  border-radius: 20px;
+  border-radius: 24px;
   overflow: hidden;
-  background: #000;
+  background: #1a1a1a;
+  aspect-ratio: 9 / 16;
 }
 
 .achievement_video video {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   object-fit: cover;
 }
