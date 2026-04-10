@@ -86,47 +86,48 @@ button {
 /* MV - トップビュー写真全画面 */
 .mv {
   width: 100%;
-  background: linear-gradient(180deg, #041430 0%, #0b3d7a 40%, #1565c0 100%);
+  background: linear-gradient(170deg, #041430 0%, #0b3d7a 50%, #1260a8 100%);
   position: relative;
   overflow: hidden;
 }
 
-/* 背景装飾：左上の光 */
+/* 背景：中央上部の柔らかな光源 */
 .mv::before {
   content: '';
   position: absolute;
-  top: -20%;
-  left: -15%;
-  width: 60%;
-  height: 140%;
-  background: radial-gradient(ellipse at center, rgba(21,101,192,0.4) 0%, transparent 70%);
+  top: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 120%;
+  background: radial-gradient(ellipse at center, rgba(18,96,168,0.5) 0%, transparent 60%);
   pointer-events: none;
   z-index: 0;
 }
 
-/* 背景装飾：右下の光 */
+/* 背景：右下の補助光 */
 .mv::after {
   content: '';
   position: absolute;
-  bottom: -30%;
-  right: -10%;
-  width: 50%;
-  height: 120%;
-  background: radial-gradient(ellipse at center, rgba(30,136,229,0.3) 0%, transparent 65%);
+  bottom: -20%;
+  right: -5%;
+  width: 40%;
+  height: 80%;
+  background: radial-gradient(ellipse at center, rgba(30,136,229,0.2) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
 
 .mv-overlay {
   position: relative;
-  padding: 32px 20px 40px;
+  padding: 28px 20px 36px;
   text-align: center;
 }
 
 .mv-content {
   position: relative;
   z-index: 3;
-  max-width: 600px;
+  max-width: 520px;
   margin: 0 auto;
 }
 
@@ -175,8 +176,8 @@ button {
 
 /* 月桂樹バッジ */
 .mv-laurel {
-  width: 120px;
-  margin-bottom: 12px;
+  width: 100px;
+  margin-bottom: 10px;
 }
 
 /* モバイルでは装飾画像を非表示 */
@@ -189,39 +190,44 @@ button {
 }
 
 .mv-sub {
-  font-size: 18px;
-  font-weight: 600;
-  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 0.2em;
+  margin-bottom: 2px;
 }
 
 .mv-title {
-  font-size: 48px;
+  font-size: 44px;
   font-weight: 900;
-  line-height: 1.2;
-  margin-bottom: 12px;
+  line-height: 1.15;
+  margin-bottom: 16px;
   color: #fff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.3);
 }
 
 .mv-title-badge {
   display: inline-block;
-  background: linear-gradient(135deg, #f5c842, #e6a817);
+  background: linear-gradient(135deg, #f5c842 0%, #e6a817 100%);
   color: #fff;
-  padding: 6px 28px;
-  border-radius: 40px;
-  font-size: 42px;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  padding: 8px 32px;
+  border-radius: 50px;
+  font-size: 40px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 20px rgba(245,200,66,0.3);
 }
 
 .mv-sns-sub {
-  font-size: 16px;
-  margin-bottom: 8px;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.05em;
 }
 
 .mv-question {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 24px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 20px;
 }
 
 .mv-badges {
@@ -1702,10 +1708,10 @@ br.pc { display: none; }
   br.sp { display: none; }
   br.pc { display: inline; }
 
-  /* MV Hero — PC */
+  /* MV Hero — PC（Kana原則：視線誘導・配色バランス・余白） */
   .mv-overlay {
     padding: 48px 20px 56px;
-    min-height: 560px;
+    min-height: 540px;
   }
 
   .mv-deco-worker1,
@@ -1718,70 +1724,79 @@ br.pc { display: none; }
 
   .mv-deco-worker1 {
     height: 92%;
-    left: 10%;
+    left: 14%;
   }
 
   .mv-deco-worker2 {
     height: 88%;
-    right: 10%;
+    right: 14%;
   }
 
   .mv-deco-excavator1 {
-    height: 70%;
-    left: 2%;
-    opacity: 0.18;
+    height: 65%;
+    left: 5%;
+    opacity: 0.15;
   }
 
   .mv-deco-excavator2 {
-    height: 65%;
-    right: 2%;
-    opacity: 0.18;
+    height: 60%;
+    right: 5%;
+    opacity: 0.15;
   }
 
   .mv-deco-wave {
-    width: 40%;
-    max-width: 500px;
-    opacity: 0.35;
+    width: 30%;
+    max-width: 400px;
+    opacity: 0.2;
     bottom: 10%;
-    right: 8%;
+    right: 10%;
+  }
+
+  .mv-content {
+    max-width: 480px;
   }
 
   .mv-laurel {
-    width: 140px;
-    margin-bottom: 16px;
+    width: 130px;
+    margin-bottom: 14px;
   }
 
   .mv-sub {
     font-size: 22px;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.25em;
+    margin-bottom: 4px;
   }
 
   .mv-title {
-    font-size: 72px;
-    margin-bottom: 20px;
+    font-size: 68px;
+    margin-bottom: 24px;
+    text-shadow: 0 3px 16px rgba(0,0,0,0.35);
   }
 
   .mv-title-badge {
-    font-size: 60px;
-    padding: 10px 44px;
+    font-size: 58px;
+    padding: 10px 48px;
+    box-shadow: 0 6px 28px rgba(245,200,66,0.35);
   }
 
   .mv-sns-sub {
-    font-size: 18px;
+    font-size: 17px;
+    margin-bottom: 8px;
   }
 
   .mv-question {
-    font-size: 16px;
+    font-size: 15px;
     margin-bottom: 28px;
   }
 
   .mv-badge-circle {
-    width: 90px;
-    height: 90px;
+    width: 88px;
+    height: 88px;
   }
 
   .mv-badges {
     margin-bottom: 28px;
+    gap: 16px;
   }
 
   .cost-sim-intro {
