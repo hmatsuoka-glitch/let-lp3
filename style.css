@@ -1423,7 +1423,8 @@ br.pc { display: none; }
   color: #555;
 }
 
-.strength-item img {
+.strength-item-img img {
+  width: 100%;
   max-width: 320px;
   border-radius: 8px;
   margin-bottom: 16px;
@@ -1915,6 +1916,39 @@ br.pc { display: none; }
 @media screen and (min-width: 769px) {
   br.sp { display: none; }
   br.pc { display: inline; }
+
+  /* Strength — PC 横並びレイアウト */
+  .strength-item {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 32px;
+  }
+
+  .strength-item-text {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+  }
+
+  .strength-item-img {
+    flex-shrink: 0;
+    width: 280px;
+  }
+
+  .strength-item-img img {
+    width: 100%;
+    max-width: none;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 0;
+  }
+
+  .strength-items {
+    max-width: 800px;
+    margin: 0 auto 60px;
+  }
 
   /* Concerns Box — PC */
   .concerns-box {
